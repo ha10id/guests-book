@@ -10,6 +10,8 @@ const port = 3000;
 const app = express();
 const adapter = new FileAsync("DB/db.json");
 
+app.use(express.static('public'));
+
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
   extname: '.hbs',
