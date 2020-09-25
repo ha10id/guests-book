@@ -30,6 +30,7 @@ app.use((err, request, response, next) => {
 low(adapter)
   .then((db) => {
     // Routes
+    // GET /
     app.get("/", (request, response) => {
       let post = db
       .get("posts")
@@ -39,7 +40,6 @@ low(adapter)
       });
     });
     // GET /posts/
-
     app.get("/posts", (req, res) => {
       let post;
       if (!_.isEmpty(req.query)) {
@@ -57,7 +57,7 @@ low(adapter)
           }
         }
       } else {
-        post = db.get("posts").slice(3, 6).value();
+        post = db.get("posts").value();
       }
       //console.log(JSON.stringify(post,null,'\t'));
       res.send(post);
@@ -76,7 +76,6 @@ low(adapter)
         .write()
         .then((post) => res.send(post));
     });
-
     // Set db default values
     return db.defaults({ posts: [] }).write();
   })
