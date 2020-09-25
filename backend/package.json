@@ -5,12 +5,23 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "startdev": "nodemon index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Anthonio Achiduzu <achiduzu@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "lodash": "^4.17.20",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "DB/*.json"
+    ]
   }
 }

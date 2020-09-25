@@ -1,0 +1,44 @@
+<form id="myForm" onsubmit="myFunc(); return false;">
+  <div class="panel">
+    <label for="user">
+      Ваше имя:
+    </label>
+    <input id="user" type="text" />
+    <label for="message">
+      Сообщение:
+    </label>
+    <input id="message" type="text" />
+    <div class="btn-container">
+      {{!-- <input type="submit"></input> --}}
+      <button class="button" type="submit">
+        Сохранить
+      </button>
+    </div>
+  </div>
+</form>
+{{#each post}}
+  <div class="panel">
+    <p>
+      гость: {{this.user}}
+    </p>
+    <p>
+      {{this.message}}
+    </p>
+  </div>
+{{/each}}
+
+<script>
+  function myFunc() {
+    var user = document.getElementById("user").value;
+    var message = document.getElementById("message").value;
+    console.log("user: " + user + "\r\nmessage: " + message);
+    const http = new XMLHttpRequest();
+    const url='/posts';
+    http.open("POST", url);
+    http.send({"user":user,"message":message});
+
+    http.onreadystatechange = (e) => {
+      console.log(e);
+    }
+  }
+</script>
