@@ -34,5 +34,6 @@
     установка зависимостей: npm install
     разработка: npm run dev
     продуктив: npm start
+    http://localhost:4000
 
 Затраченное время: https://wakatime.com/@ha10id/projects/wecliipvei?start=2020-09-22&end=2020-09-28
