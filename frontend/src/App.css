@@ -1,0 +1,84 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width:80vw;
+  margin: .4rem;
+  padding: 2rem;
+  color: black;
+  background-color:rgb(206, 226, 211);
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width:100%;
+}
+
+.btn-container {
+  padding: .4rem;
+  width:100%;
+  display: flex;
+}
+.button {
+  display: flex;
+  margin: auto;
+  color: #fff;
+  background-color: #008fd3;
+  border: 0;
+  padding: .6em 1em;
+  line-height: 1.2em;
+  cursor: pointer;
+  font-size: .929em;
+  border-radius: 4px;
+}
+.button:active {
+  background-color: yellow;
+  border: 0;
+}
+.button:disabled {
+  background-color: darkgray;
+}
+#user, #message {
+  width: 100%;
+  margin-bottom: .4rem;
+}
+
+input.clean {
+  outline-width: 0;
+  border:none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input.clean:focus {
+  outline-width: 0;
+  text-align: center;
+  font-weight: bold;
+  cursor: text;
+}
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: red;
+}
+
+.link-button:hover,
+.link-button:focus {
+font-weight: bold;
+}
