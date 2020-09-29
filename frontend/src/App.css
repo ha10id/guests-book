@@ -1,56 +1,23 @@
 .App {
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: aliceblue;
 }
-
+.container {
+  width:90vw;
+  min-width: 370px;
+  min-height: 100vh;
+}
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width:80vw;
-  margin: .4rem;
-  padding: 2rem;
-  color: black;
-  background-color:rgb(206, 226, 211);
+  padding: 1rem;
 }
-.actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  width:100%;
+header, footer {
+  text-align: center;
+  width: 88vw;
+  background-color: transparent;
 }
-
-.btn-container {
-  padding: .4rem;
-  width:100%;
-  display: flex;
-}
-.button {
-  display: flex;
-  margin: auto;
-  color: #fff;
-  background-color: #008fd3;
-  border: 0;
-  padding: .6em 1em;
-  line-height: 1.2em;
-  cursor: pointer;
-  font-size: .929em;
-  border-radius: 4px;
-}
-.button:active {
-  background-color: yellow;
-  border: 0;
-}
-.button:disabled {
-  background-color: darkgray;
-}
-#user, #message {
-  width: 100%;
-  margin-bottom: .4rem;
-}
-
 input.clean {
   outline-width: 0;
   border:none;
@@ -59,6 +26,8 @@ input.clean {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  margin: 0;
+  padding: 0;
 }
 input.clean:focus {
   outline-width: 0;
@@ -67,18 +36,8 @@ input.clean:focus {
   cursor: text;
 }
 
-.link-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline;
-  margin: 0;
-  padding: 0;
-  color: red;
-}
-
-.link-button:hover,
-.link-button:focus {
-font-weight: bold;
+.paginator {
+  align-items: baseline;
+  justify-content: center;
+  bottom: 1rem;
 }

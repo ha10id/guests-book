@@ -4,9 +4,9 @@ export const Paginator = (props) => {
   const [changePage, setChangePage] = useState(false);
 
   return (
-    <div className="btn-container">
+    <div className="row col-sm" style={{justifyContent:"center"}}>
       <button
-        className="button"
+        className="button primary"
         disabled={props.pages.current === 1}
         onClick={props.pageBack}
       >
@@ -42,7 +42,7 @@ export const Paginator = (props) => {
         )}
       </button>
       <button
-        className="button"
+        className="button primary"
         disabled={props.pages.current === props.pages.total}
         onClick={props.pageForward}
       >

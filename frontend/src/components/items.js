@@ -58,10 +58,12 @@ const ItemList = () => {
   };
 
   return (
-    <>
+    <div className="container fluid">
       <NewItem  save={saveItem}/>
       {items.data.map((item, idx) => (
+        <div className="row">
         <Item key={idx} item={item} remove={removeItem}/>
+        </div>
       ))}
       <Paginator
         pages={pages}
@@ -74,7 +76,7 @@ const ItemList = () => {
         }}
         pageForward={() => setPages({ ...pages, current: pages.current + 1 })}
       />
-    </>
+    </div>
   );
 };
 

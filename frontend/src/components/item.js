@@ -8,20 +8,22 @@ const Item = (props) => {
   };
 
   return (
-    <div className="card">
+    <div className="col-sm">
+    <div className="card fluid">
       <div className="item_text">
-        <p>{item.user}</p>
+        <p>Гость: {item.user}</p>
         <p>{item.message}</p>
       </div>
-      <div className="actions">
+      <div className="row fluid" style={{justifyContent:"flex-end"}}>
         <button
           type="button"
-          className="link-button"
+          className="secondary"
           onClick={remove}
         >
           Удалить
         </button>
       </div>
+    </div>
     </div>
   );
 };

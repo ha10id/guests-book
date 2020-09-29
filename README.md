@@ -30,10 +30,10 @@
     сборка: yarn build
 
 # Backend
-    предварительно собрать frontend
     установка зависимостей: npm install
     разработка: npm run dev
     продуктив: npm start
+    предварительно собрать frontend
     http://localhost:4000
 
-Затраченное время: https://wakatime.com/@ha10id/projects/wecliipvei?start=2020-09-22&end=2020-09-28
+Затраченное время: https://wakatime.com/@ha10id/projects/wecliipvei?start=2020-09-23&end=2020-09-29
